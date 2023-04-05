@@ -41,7 +41,7 @@ struct lokasi {
     string tag;
 };
 
-lokasi lok[MAX_SIZE];
+const lokasi lok[MAX_SIZE];
 const char* filename = "./lokasi.txt";
 
 void bookmark(string username){
@@ -211,7 +211,7 @@ void importData() {
 }
 
 void search(string username) {
-    string key, pilih, user = username;
+    string key, pilih;
     int input;
     bool validasi;
     cout << "=====================================================" << endl;
@@ -267,7 +267,7 @@ void search(string username) {
         cout << "Apakah anda ingin menambahkannya kek bookmark?(y/t) ";
         cin >> pilih;
         if (pilih == "y" || pilih == "Y") {
-            addbookmark(user, input);
+            addbookmark(username, input);
         }
 }
 
